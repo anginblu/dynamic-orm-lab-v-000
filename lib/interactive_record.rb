@@ -57,6 +57,7 @@ class InteractiveRecord
     options.each do |property, value|
       result = DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE #{property} = ?", value)
     end
+    result
   end
 
 
