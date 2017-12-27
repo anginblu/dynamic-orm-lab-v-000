@@ -55,12 +55,7 @@ class InteractiveRecord
 
   def self.find_by(attribute:)
     sql = "SELECT * FROM #{self.table_name} WHERE #{attribute} = ?"
-      DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE id = ?", attribute)
-    elsif name != nil
-      DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE name = ?", name)
-    elsif grade != nil
-      DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE grade = ?", grade)
-    end
+      DB[:conn].execute(sql, attribute)
   end
 
 end
