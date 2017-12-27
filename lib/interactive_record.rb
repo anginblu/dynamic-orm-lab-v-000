@@ -54,7 +54,6 @@ class InteractiveRecord
   end
 
   def self.find_by(id: nil, name: nil, grade: nil)
-    sql = "SELECT * FROM #{self.table_name} WHERE ? = ?"
     if id != nil
       DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE id = ?", id)
     elsif name != nil
