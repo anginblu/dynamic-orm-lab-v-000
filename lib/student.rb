@@ -9,4 +9,6 @@ class Student < InteractiveRecord
     @name = name
     @grade = grade
   end
+
+  
 end
