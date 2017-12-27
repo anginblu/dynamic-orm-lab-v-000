@@ -53,7 +53,7 @@ class InteractiveRecord
     DB[:conn].execute(sql)
   end
 
-  def self.find_by(attribute)
+  def self.find_by(attribute:)
     if id != nil
       DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE id = ?", id)
     elsif name != nil
