@@ -63,4 +63,5 @@ class InteractiveRecord
       DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE grade = ?", @grade)
     end
   end
+  
 end
