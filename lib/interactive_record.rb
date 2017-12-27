@@ -57,5 +57,9 @@ class InteractiveRecord
     sql = "SELECT * FROM #{self.table_name} WHERE ? = ?"
     if id != nil
       DB[:conn].execute(sql, id, @id)
+    elsif name != nil
+      DB[:conn].execute(sql, name, @id)
+    elsif grade != nil
+      DB[:conn].execute(sql, grade, @id)
   end
 end
